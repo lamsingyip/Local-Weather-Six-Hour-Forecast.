@@ -1,0 +1,101 @@
+<!doctype HTML>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Weather</title>
+	<link rel="stylesheet" type="text/css" href="weather.css">
+	<link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,500" rel="stylesheet">
+</head>
+
+<body>
+	<div class="page">
+		<div class="upper">
+			<div class="left">
+				<div class="titlebox">
+					<div class="title">Local Weather Six Hour Forecast</div>
+					<div class="subtitle">Northern California with Doppler radar</div>
+				</div>
+				<div class="entry">
+					<div class="for">Forecast for</div>
+					<div class="search">
+						<div class="city">
+							<input class="inputcity" id="city" placeholder="Davis,CA" Value="Davis,CA">
+						</div>
+						<div class="button">
+							<p onclick="newRequest()">submit</p>
+						</div>
+					</div>
+				</div>
+				<div class="Temp">
+					<div class="currentTime">current<br>
+						<div id="currentTime0"></div>
+					</div>
+					<div class="weatherIcon" id="currentWeather">
+						<img id="currentWeather0" src="../weatherDesign/assets/mist.svg" alt="weatherPic">
+					</div>
+					<div class="currentTemp" id="currentTemperature"></div>
+				</div>
+			</div>
+
+
+			<div class="right">
+				<div class="radarPic" style="position:absolute;z-index:1;left:0px;top:0px;">
+					<img class="radarPic" src="http://radar.weather.gov/ridge/Overlays/Topo/Short/DAX_Topo_Short.jpg">
+				</div>
+				<div class="radarPic" style="position:absolute;z-index:2;left:0px;top:0px;">
+					<img id="radarAnimation" class="radarPic" src="https://radar.weather.gov/ridge/RadarImg/N0R/DAX_N0R_0.gif">
+				</div>
+				<div class="radarPic" style="position:absolute;z-index:3;left:0px;top:0px;">
+					<img class="radarPic" src="http://radar.weather.gov/ridge/Overlays/Cities/Short/DAX_City_Short.gif">
+				</div>
+			</div>
+
+			<div class="b1c">
+				<p onclick="slideFunction1()" class="b1" id="b1"> &#8896;</p>
+			</div>
+		</div>
+
+
+
+		<div class="lower">
+			<div class="b2c">
+				<p onclick="slideFunction2()" class="b2" id="b2"> &#8897;</p>
+			</div>
+			<div class="lowerBox" id="inOne">
+				<div id="time1" class="futureTime">1:00PM</div>
+				<div class="futureWeather"><img class="lowerpic" id="weather1" src="../weatherDesign/assets/mist.svg" alt="weatherPic1"></div>
+				<div id="temp1" class="futureTemp"></div>
+			</div>
+			<div class="lowerBox" id="inTwo">
+				<div id="time2" class="futureTime">2:00PM</div>
+				<div class="futureWeather"><img class="lowerpic" id="weather2" src="../weatherDesign/assets/mist.svg" alt="weatherPic2"></div>
+				<div id="temp2" class="futureTemp"></div>
+			</div>
+			<div class="lowerBox" id="inThree">
+				<div id="time3" class="futureTime">3:00PM</div>
+				<div class="futureWeather"><img class="lowerpic" id="weather3" src="../weatherDesign/assets/mist.svg" alt="weatherPic3"></div>
+				<div id="temp3" class="futureTemp"></div>
+			</div>
+			<div class="lowerBox" id="inFour">
+				<div id="time4" class="futureTime">4:00PM</div>
+				<div class="futureWeather"><img class="lowerpic" id="weather4" src="../weatherDesign/assets/mist.svg" alt="weatherPic4"></div>
+				<div id="temp4" class="futureTemp"></div>
+			</div>
+			<div class="lowerBox" id="inFive">
+				<div id="time5" class="futureTime">5:00PM</div>
+				<div class="futureWeather"><img class="lowerpic" id="weather5" src="../weatherDesign/assets/mist.svg" alt="weatherPic5"></div>
+				<div id="temp5" class="futureTemp"></div>
+			</div>
+		</div>
+	</div>
+
+	<script src="weather.js"></script>
+
+</body>
+
+
+</html>
